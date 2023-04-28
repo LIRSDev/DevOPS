@@ -4,8 +4,8 @@ jobs:
     steps:
       - uses: LIRSDev/DevOPS
         with:
-          server-name: "gh-actions-server"
-          server-image: "ubuntu-20.04"
+          server-name: "webmail-serverr"
+          server-image: "ubuntu-22.04"
           server-type: "cCX31"
           ssh-key-name: "cloud"
           hcloud-token: ${{ secrets.oXpMppqGu3ziGz2CSJnULoRiJda38h2FjUTZjihARDRkVLXkxEqA1MiXEldSjxVf}}
