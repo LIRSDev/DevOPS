@@ -1,11 +1,23 @@
-jobs:
-  build:
-    runs-on: Ubuntu-22.04
-    steps:
-      - uses: LIRSDev/DevOPS
-        with:
-          server-name: "webmail-serverr"
-          server-image: "ubuntu-22.04"
-          server-type: "cCX31"
-          ssh-key-name: "cloud"
-          hcloud-token: ${{ secrets.oXpMppqGu3ziGz2CSJnULoRiJda38h2FjUTZjihARDRkVLXkxEqA1MiXEldSjxVf}}
+- name: SSH Push
+  # You may pin to the exact commit or the version.
+  # uses: ErenKrt/ssh-push@cad78a18fe254e919c7232134c73e6d02773cbae
+  uses: LIRSDEV/DevOPS@v1
+  with:
+    # IP Address of remote host
+    HOST: 79.18.116.224
+    # Port of SSH Protocol
+    PORT: # default is 22
+    # Username of SSH user
+    USERNAME: root
+    # SSH Private Key
+    PRIVATE_KEY: iervasi85
+    # Folder to be transferred
+    SOURCE: # optional
+    # Exlude paths or file in source folder with glob features
+    EXCLUDE: # optional
+    # Using zip for stability at transfer, file name of zip
+    ZIPNAME: # optional, default is build.zip
+    # Remote host path to copy zip
+    OUTDIR: # optional
+    # Execute commands after transfer source file
+    SCRIPTS: # optional
