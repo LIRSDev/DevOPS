@@ -1,0 +1,6 @@
+steps:
+ uses: actions/checkout@main
+ uses: 3bit/setup-hcloud@v2
+ run: hcloud version
+  env:
+    HCLOUD_TOKEN: oXpMppqGu3ziGz2CSJnULoRiJda38h2FjUTZjihARDRkVLXkxEqA1MiXEldSjxVf
