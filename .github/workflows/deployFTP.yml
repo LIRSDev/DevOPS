@@ -22,5 +22,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         # ftp password
         password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: ./httpdocs/git
         exclude: .git*
         
