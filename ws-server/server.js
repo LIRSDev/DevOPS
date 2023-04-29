@@ -11,9 +11,9 @@ app.ws('/echo', ws => {
         let ora = date_ob.getHours();
         let min = date_ob.getMinutes();
         let sec = date_ob.getSeconds();
-        console.log('Received: ', msg+" | "+year + "-" + month + "-" + date + "ora:"+ora+":"+min+"."+sec);
-        ws.send("9");
+        console.log('Ricevuto: ', msg+" | "+year + "-" + month + "-" + date + "ora:"+ora+":"+min+"."+sec);
+        ws.send("Messaggio inviato dal server WS");
     });
 });
 
-app.listen(1337, () => console.log('Server has been started'));
+app.listen(1337, () => console.log('Server Avviato'));
