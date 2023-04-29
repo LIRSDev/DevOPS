@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="https://www.mischianti.org/favicon.ico" type="image/x-icon"/>
 
     <meta charset="UTF-8">
-    <title>WebSocket Client</title>
+    <title>WebSocket Client For lirs WebSocket</title>
 </head>
 <body>
 <div style="background-color: aliceblue; padding: 15px;">
@@ -78,7 +78,7 @@
         }
 
         function onMessage(evt) {
-            writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data + '</span>');
+            writeToScreen('<span style="color: blue;">Risposta: ' + evt.data + '</span>');
             // websocket.close();
         }
 
@@ -107,7 +107,7 @@
     <h3>WebSocket Test Client</h3>
     <br/><br/>
 
-    <input type="text" id="uriWebSocketServer" value="ws://192.168.1.179:8081/">
+    <input type="text" id="uriWebSocketServer" value="" placeholder="ws://192.168.1.179:8081/">
     <input type="button" value="Reconnect!" onclick="websocket && websocket.close();init();">
     <br/><br/>
     Login: <input type="text" id="login" value="mischianti"/><br/>
@@ -119,7 +119,7 @@
     <div id="wsClientOutput"></div>
     <br>
 <!--    <input type="text" id="messageToSend" value="Simple js client message!!">-->
-    <TEXTAREA id="messageToSend" >Simple js client message!!</TEXTAREA>
+    <TEXTAREA id="messageToSend" >Invio Messaggio !!</TEXTAREA>
     <input type="button" value="Send message!" onclick="doSend(document.getElementById('messageToSend').value)">
     <br><br>
     <input type="button" value="Close connection!" onclick="websocket.close()">
